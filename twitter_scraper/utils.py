@@ -130,7 +130,7 @@ def get_timeline_user(username, min_id=0, max_tweets=0):
         username = username.replace('@', '')
 
     headers = HEADER
-    BASE_API = f"https://twitter.com/i/profiles/show/{username}/timeline/tweets?"
+    BASE_API = "https://twitter.com/i/profiles/show/{username}/timeline/tweets?".format(username=username)
     base_query = "composed_count=0&include_available_features=1&include_entities=1&include_new_items_bar=true&interval=30000&latent_count=0"
 
     tweets = []
